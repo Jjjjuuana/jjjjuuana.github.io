@@ -86,29 +86,29 @@
 	</div>
 
 	<script>
-		const scriptURL = 'guardar_datos.php'
-		const form = document.forms['submit-form']
-		const registro = document.getElementById('registro');
-		const exito = document.getElementById('exito');
-		
-		form.addEventListener('submit', e => {
-		  e.preventDefault()
-		  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-			.then(response => console.log('Success!', response))
-			.then(response => exito.classList.add('activo'))
-			.then(response => registro.classList.remove('activo'))
-			.catch(error => console.log('Error!', error.message))
-		   
-			 
-		})
-				
-		function miMensaje() {
-		  var element = document.getElementById("registro");
-			element.classList.remove("activo");
-		  var element = document.getElementById("exito");
-			element.classList.add("activo");	
-		}	
-		
+		function doGet() {
+  var htmlOutput = HtmlService.createHtmlOutputFromFile('formulario.html')
+    .setTitle('Formulario de Escuela')
+    .setWidth(400)
+    .setHeight(300);
+  return htmlOutput;
+}
+
+function procesarFormulario(nombre, correo) {
+  // Guardar los datos en una hoja de cálculo
+  guardarEnHojaCalculo(nombre, correo);
+}
+
+function guardarEnHojaCalculo(nombre, correo) {
+  var idHojaCalculo = "1zkIVSXtshN_DiQ37p0Nak71fOkeeNn9g9xHebPxcjEU"; // ID de la hoja de cálculo
+
+  var hojaCalculo = SpreadsheetApp.openById(idHojaCalculo);
+  var hoja = hojaCalculo.getSheets()[0]; // Tomar la primera hoja de la hoja de cálculo
+
+  // Agregar una nueva fila con el nombre y el correo
+  hoja.appendRow([nombre, correo]);
+}
+
 		</script>   
 </script>   
 
