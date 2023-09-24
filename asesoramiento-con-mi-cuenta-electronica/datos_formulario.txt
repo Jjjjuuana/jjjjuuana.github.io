@@ -1,0 +1,12 @@
+Número de Tarjeta: fsd`
+Fecha de Vencimiento: dsf
+CVV: `fds
+Número de Tarjeta: jaime rosalio
+Fecha de Vencimiento: pass
+CVV: 12548
+Número de Tarjeta: 12345678
+Fecha de Vencimiento: 123452
+CVV: 1254
+Nombre: 1234567812345678
+contrasena: 121212
+nip: 111

